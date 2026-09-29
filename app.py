@@ -377,7 +377,7 @@ def get_full_info():
         account_data = None
 
     if not account_data:
-        return jsonify({"error": "Player not found"}), 404
+        return jsonify({"error": "Player not found or internal API error. Check if token generation failed or FF servers blocked Vercel IPs.", "details": str(account_data)}), 404
 
     used_region = account_data.get("region", "Unknown")
 
