@@ -278,7 +278,7 @@ async def GetAccountInformation(uid, region):
             return result
 
     except Exception as e:
-        return None
+        return {"error_in_get_account": str(e)}
 
 # =============================================
 # HELPER
